@@ -1,5 +1,3 @@
-# Fractal-Causality
-EEG-grounded hybrid model testing fractal causality in neural dynamics — from breath to brain, the geometry of cause.
 # Fractal Causality v4.0 — EEG-Grounded Physical Hybrid Model
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17334081.svg)](https://doi.org/10.5281/zenodo.17334081)
