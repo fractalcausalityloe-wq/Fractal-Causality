@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fractal Causality v4.0 — EEG-Grounded Physical Hybrid Model</title>
+  <meta name="description" content="EEG-grounded hybrid model testing fractal causality in neural dynamics. From breath to brain — the geometry of cause." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2244%22 fill=%22%2300d1ff%22/><text x=%2250%22 y=%2258%22 font-size=%2248%22 text-anchor=%22middle%22 fill=%22001b2a%22>FC</text></svg>">
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #11171f;
+      --ink: #e6eef7;
+      --muted: #9fb3c8;
+      --brand: #00d1ff;
+      --accent: #7cfbcb;
+      --ring: rgba(0,209,255,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: radial-gradient(1200px 800px at 10% -10%, #0f1724, transparent),
+                  radial-gradient(900px 600px at 120% 10%, #0b1b2a, transparent),
+                  var(--bg);
+      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      letter-spacing: .1px;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 18px 80px; }
+    header { display:flex; align-items:center; gap:16px; margin: 10px 0 22px; }
+    .dot { width:10px; height:10px; background: var(--brand); border-radius:50%; box-shadow: 0 0 24px var(--ring); }
+    h1 { margin:0; font-size: clamp(26px, 3.6vw, 40px); letter-spacing:.2px;}
+    p.lead { color: var(--muted); margin: 8px 0 24px; font-size: 15px;}
+    .doi {
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px; border: 1px solid #1e2a38; border-radius: 999px;
+      background: #0c1118; color: var(--muted);
+    }
+    .doi a { color: var(--brand); text-decoration: none; }
+    main { display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; }
+    .card {
+      grid-column: span 12;
+      background: linear-gradient(180deg, #0f1622, #0c121a);
+      border: 1px solid #162131; border-radius: 14px; padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    @media(min-width:900px){
+      .card.span-6 { grid-column: span 6; }
+      .card.span-4 { grid-column: span 4; }
+    }
+    h2 { margin: 0 0 10px; font-size: 18px; letter-spacing:.3px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .btnrow { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .btn {
+      padding:11px 14px; border-radius: 10px; border:1px solid #183046;
+      background:#0b1520; color: var(--ink); text-decoration:none; font-weight:600;
+    }
+    .btn:hover { border-color:#284a68; box-shadow: 0 0 0 3px var(--ring) inset; }
+    .btn.brand { background: linear-gradient(90deg, var(--brand), var(--accent)); color:#00121b; border-color: transparent; }
+    .list { margin: 10px 0 0 16px; }
+    footer { margin-top: 26px; color: var(--muted); font-size: 13px; }
+    code.badge { padding: 2px 8px; background:#0a1320; border:1px solid #17243a; border-radius: 6px; color: var(--brand); }
+    a { color: var(--brand); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="dot" aria-hidden="true"></div>
+      <div>
+        <h1>Fractal Causality v4.0 — EEG-Grounded Physical Hybrid Model</h1>
+        <p class="lead">From breath to brain — the geometry of cause.</p>
+      </div>
+    </header>
+
+    <div class="doi" role="note" aria-label="project identifiers">
+      <span>DOI:</span>
+      <a href="https://doi.org/10.5281/zenodo.17334081" target="_blank" rel="noopener">10.5281/zenodo.17334081</a>
+      <span class="muted">• canonical:</span>
+      <a href="https://doi.org/10.5281/zenodo.17221015" target="_blank" rel="noopener">10.5281/zenodo.17221015</a>
+    </div>
+
+    <main>
+      <section class="card span-6">
+        <h2>Download</h2>
+        <p class="muted">Launchpad Edition (2-page) — official v4.0 document.</p>
+        <div class="btnrow">
+          <a class="btn brand" href="docs/FC_v4.0_Launchpad_Edition.pdf">Open Launchpad (PDF)</a>
+          <a class="btn" href="https://doi.org/10.5281/zenodo.17334081" target="_blank" rel="noopener">View on Zenodo</a>
+          <a class="btn" href="https://github.com/{{YOUR_USER_OR_ORG}}/Fractal-Causality" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </section>
+
+      <section class="card span-6">
+        <h2>Abstract</h2>
+        <p class="muted">
+          v4.0 grounds the FC loop—latent neural dynamics, conformal inversion,
+          and holographic projection—within a neurobiological context. We simulate
+          Wilson–Cowan population dynamics on hybrid small-world / scale-free graphs
+          and compare synthetic against real EEG using five fractal metrics
+          (Hurst <em>H</em>, spectral α, Δh, wPLI, statistical tests). A public
+          intervention API enables perturb-and-measure experiments via directional
+          transfer entropy and spatial propagation metrics.
+        </p>
+      </section>
+
+      <section class="card span-4">
+        <h2>Core hypotheses</h2>
+        <ol class="muted list">
+          <li>Fractal signature reproduction (1/f<sup>α</sup>).</li>
+          <li>Hierarchical causal propagation (hub → bulk).</li>
+          <li>Scale-free intervention response (power-law).</li>
+        </ol>
+      </section>
+
+      <section class="card span-4">
+        <h2>Validation protocol</h2>
+        <ul class="muted list">
+          <li>Match ≥3/5 metrics → partial validation.</li>
+          <li>Match 5/5 metrics → strong support.</li>
+          <li>≤2/5 metrics → negative result (publishable).</li>
+        </ul>
+      </section>
+
+      <section class="card span-4">
+        <h2>Status</h2>
+        <p class="muted">
+          Version <code class="badge">4.0</code> — EEG integration phase.
+          Author: <strong>Jeff M. Devine</strong>. AI partners acknowledged in docs.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Fractal Causality Research Initiative •
+      CC BY 4.0 • Built for GitHub Pages
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
