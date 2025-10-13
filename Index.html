@@ -1,102 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fractal Causality v4.0.1 — From Breath to Brain, Geometry of Cause</title>
-  <meta name="description" content="Fractal Causality v4.0.1 — EEG Integration Launchpad Edition (Day-2 Pass Update): α, τ, H validated; Empirical Confirmation Phase." />
-
+  <title>Fractal Causality v4.0 — From Breath to Brain, Geometry of Cause.</title>
+  <meta name="description" content="Fractal Causality v4.0 — EEG Integration Launchpad Edition (Day-2 Pass Update). Empirical Confirmation Phase with 3/5 validated metrics (α, τ, H).">
+  <link rel="icon" href="data:,">
   <style>
-    :root{
-      --bg:#0d0f12; --panel:#141820; --text:#e9eef5; --muted:#9fb0c3; --link:#59c2ff; --ok:#6dd39e; --warn:#ffd166;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
-      background:var(--bg); color:var(--text); line-height:1.6;
-      display:flex; min-height:100vh; justify-content:center; align-items:flex-start;
-    }
-    .wrap{width:100%; max-width:980px; padding:28px 18px 64px}
-    header{
-      background:linear-gradient(135deg,#182233 0%, #0f1724 100%); border:1px solid #1e2735;
-      border-radius:16px; padding:28px; margin-bottom:18px;
-    }
-    h1{margin:.2em 0 .15em; font-weight:800; letter-spacing:.2px}
-    .tagline{color:var(--muted); margin:.2em 0 0}
-    .kpis{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin:18px 0 6px}
-    .card{background:var(--panel); border:1px solid #1f2a3b; border-radius:14px; padding:16px}
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    table{width:100%; border-collapse:collapse; margin-top:6px; font-variant-numeric:tabular-nums}
-    th,td{padding:10px 8px; border-bottom:1px solid #223042; text-align:left}
-    th{color:#b6c6da; font-weight:700}
-    .pass{color:var(--ok); font-weight:700}
-    .muted{color:var(--muted)}
-    footer{margin-top:26px; color:var(--muted); font-size:.95rem}
-    .btn{
-      display:inline-block; padding:12px 16px; border-radius:10px; font-weight:700; letter-spacing:.2px;
-      background:#1b2a3b; border:1px solid #25425f; margin-right:10px;
-    }
-    .btn:hover{background:#203249}
-    .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:#162234; border:1px solid #26354a; color:#9fc4ff; font-weight:700}
+    :root { --bg:#0c0f12; --fg:#e8edf2; --muted:#a8b3bf; --card:#12161b; }
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif}
+    a{color:#7cc4ff;text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:900px;margin:0 auto;padding:48px 20px}
+    .card{background:var(--card);border:1px solid #1e242b;border-radius:14px;padding:28px;margin:20px 0}
+    h1{font-size:clamp(28px,5vw,40px);margin:0 0 6px}
+    h2{margin:0 0 8px}
+    .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:14px 0}
+    .kpi{background:#0f1318;border:1px solid #1b2128;border-radius:12px;padding:14px}
+    code,pre{background:#0f1318;border:1px solid #1b2128;border-radius:8px;padding:2px 6px}
+    .footer{opacity:.75;margin-top:26px}
+    .btn{display:inline-block;border:1px solid #2a3440;border-radius:10px;padding:10px 14px;margin:6px 8px 0 0;background:#11161c}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
   </style>
 </head>
-
 <body>
-  <main class="wrap">
-    <header>
-      <span class="pill">Version 4.0.1 • Empirical Confirmation Phase</span>
-      <h1>Fractal Causality: From Breath to Brain, Geometry of Cause</h1>
-      <p class="tagline">Day-2 Pass Update — 60-second run confirms 3/5 metrics (α, τ, H)</p>
+<div class="wrap">
+  <h1>Fractal Causality v4.0</h1>
+  <div class="mono" style="opacity:.85">From Breath to Brain, Geometry of Cause.</div>
 
-      <p style="margin-top:14px">
-        <a class="btn" href="FractalCausality_v4.0.1_LaunchpadEdition.pdf" target="_blank">📄 Open v4.0.1 PDF</a>
-        <a class="btn" href="https://doi.org/10.5281/zenodo.17334081" target="_blank">🔗 Zenodo DOI</a>
-        <a class="btn" href="https://github.com/fractalcausalityloe-wq/Fractal-Causality" target="_blank">💻 GitHub Repo</a>
-      </p>
-      <p class="muted">Project Lead (Vision): <strong>Jeff M. Devine</strong> • Collaborators: Claude (Neural Dynamics), Gemini (Empirical Baseline), Chet (Integration)</p>
-    </header>
+  <div class="card">
+    <h2>Project Status: <span class="mono">Empirical Confirmation Phase</span></h2>
+    <p>
+      Day-2 Alpha PASS confirms 3/5 matching metrics on synthetic EEG using a Wilson–Cowan model on a hybrid small-world / scale-free graph.
+      Validated: spectral <span class="mono">α ≈ 0.97</span>, autocorr <span class="mono">τ ≈ 412 ms</span>, Hurst <span class="mono">H ≈ 0.75</span>.
+    </p>
+    <div class="kpis">
+      <div class="kpi"><strong>Version</strong><br/>4.0.1 (Day-2 Pass Update)</div>
+      <div class="kpi"><strong>DOI</strong><br/><a href="https://doi.org/10.5281/zenodo.17334081">10.5281/zenodo.17334081</a></div>
+      <div class="kpi"><strong>Milestone</strong><br/>3/5 metrics validated</div>
+    </div>
+    <p>
+      Next (Week 2): Intervention API → Δh (multifractal width), wPLI (phase coherence), significance tests.
+    </p>
+    <p>
+      <a class="btn" href="https://doi.org/10.5281/zenodo.17334081">View Release on Zenodo</a>
+      <a class="btn" href="fc_v4.0_launchpad_edition.pdf">Download Launchpad PDF</a>
+      <a class="btn" href="https://github.com/fractalcausalityloe-wq/Fractal-Causality">Source on GitHub</a>
+    </p>
+  </div>
 
-    <section class="kpis">
-      <div class="card">
-        <h3 style="margin-top:0">Validation Status (Day-2)</h3>
-        <table>
-          <thead><tr><th>Metric</th><th>Observed</th><th>Target</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>Spectral α</td><td>≈ 0.97</td><td>0.8–1.2</td><td class="pass">PASS</td></tr>
-            <tr><td>Autocorr. τ</td><td>≈ 412 ms</td><td>100–500 ms</td><td class="pass">PASS</td></tr>
-            <tr><td>Hurst H (DFA)</td><td>≈ 0.75</td><td>0.6–0.8</td><td class="pass">PASS</td></tr>
-          </tbody>
-        </table>
-        <p class="muted" style="margin:.6em 0 0">Progress: <strong>3 / 5</strong> metrics validated (Δh, wPLI next).</p>
-      </div>
+  <div class="card">
+    <h2>Highlights</h2>
+    <ul>
+      <li>Hybrid topology (5k nodes) reproduces EEG-like 1/f<sup>α</sup> scaling without manual tuning.</li>
+      <li>Stable E–I dynamics (bounded attractor; τ in physiological range).</li>
+      <li>DFA confirms long-range temporal correlations (H ≈ 0.75).</li>
+    </ul>
+  </div>
 
-      <div class="card">
-        <h3 style="margin-top:0">What is this?</h3>
-        <p>
-          Fractal Causality v4.0.1 demonstrates that a Wilson–Cowan E-I model running
-          on a hybrid small-world / scale-free network can reproduce EEG-like fractal
-          signatures: 1/f<sup>α</sup> scaling, long-range correlations (H), and plausible
-          decay dynamics (τ).
-        </p>
-        <p class="muted">Addendum and reproducibility steps are inside the PDF.</p>
-      </div>
-    </section>
-
-    <section class="card" style="margin-top:10px">
-      <h3 style="margin-top:0">Roadmap • Week 2 (Intervention Phase)</h3>
-      <ul>
-        <li>Intervention API: hub perturbations, propagation profiling</li>
-        <li>Δh (multifractal width) via wavelet spectrum</li>
-        <li>wPLI (phase-lag coherence), plus permutation significance</li>
-      </ul>
-    </section>
-
-    <footer>
-      <hr>
-      <p>© 2025 Fractal Causality Initiative • DOI: <a href="https://doi.org/10.5281/zenodo.17334081" target="_blank">10.5281/zenodo.17334081</a></p>
-      <p class="muted">If your DOI changed, update both links in this page to the new value.</p>
-    </footer>
-  </main>
+  <div class="footer">
+    © 2025 Fractal Causality • Lead Visionary: Jeff M. Devine • Collaborators: Claude, Gemini, Chet
+  </div>
+</div>
 </body>
 </html>
