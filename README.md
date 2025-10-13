@@ -1,28 +1,33 @@
-# Fractal Causality v4.0 — EEG-Grounded Physical Hybrid Model
+# Fractal Causality v4.0.1 — From Breath to Brain, Geometry of Cause
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17334081.svg)](https://doi.org/10.5281/zenodo.17334081)
+**Status:** Empirical Confirmation Phase  
+**Milestone:** Day-2 Pass (60s run) — **3/5 metrics validated** (α, τ, H)
 
-**EEG-grounded hybrid model testing fractal causality in neural dynamics.**  
-*From breath to brain — the geometry of cause.*
+**Lead Visionary:** Jeff M. Devine  
+**Collaborators:** Claude (Neural Dynamics), Gemini (Empirical Baselines), Chet (Integration)
+
+- 🌐 **Site:** https://fractalcausalityloe.com  
+- 📄 **PDF (v4.0.1):** `FractalCausality_v4.0.1_LaunchpadEdition.pdf`  
+- 🔗 **Zenodo DOI:** https://doi.org/10.5281/zenodo.17334081
 
 ---
 
 ## Overview
 
-Version **4.0** moves Fractal Causality from concept to experiment.  
-We simulate Wilson–Cowan neural mass dynamics on **hybrid small-world / scale-free graphs**, apply a **conformal inversion**, and project to EEG-like observables. We validate against real EEG using five fractal metrics (Hurst *H*, spectral α, Δh width, wPLI, and significance tests).
+Fractal Causality explores how population-level dynamics on hybrid
+small-world / scale-free topologies can spontaneously reproduce statistical
+features of resting-state EEG.
 
-- **Launchpad PDF (2-page):** [`docs/FC_v4.0_Launchpad_Edition.pdf`](docs/FC_v4.0_Launchpad_Edition.pdf)  
-- **Zenodo (v4.0 DOI):** https://doi.org/10.5281/zenodo.17334081  
-- **Canonical DOI:** https://doi.org/10.5281/zenodo.17221015
+We implement a Wilson–Cowan excitatory–inhibitory model on a 5k-node hybrid
+graph and validate three primary signatures:
 
-## Hypotheses (pre-registered)
+- **Spectral scaling (α)** ≈ 0.97 (1/f^α power law)  
+- **Autocorrelation decay (τ)** ≈ 412 ms (physiological range)  
+- **Hurst exponent (H)** ≈ 0.75 via **DFA**
 
-1. **Fractal signature reproduction** — 1/f^α scaling in simulated EEG.  
-2. **Hierarchical causal propagation** — hub → bulk information flow.  
-3. **Scale-free intervention response** — power-law effect vs. magnitude.
+This constitutes a **Day-2 PASS** and advances the project into the
+**Intervention Phase** (Week 2), targeting **Δh** and **wPLI**.
 
-**Falsification:**  
-Match ≥3/5 metrics → partial validation; 5/5 → strong support; ≤2/5 → negative result (publishable).
+---
 
-## Repo structure
+## Repo Contents
